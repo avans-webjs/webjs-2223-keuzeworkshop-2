@@ -1,0 +1,58 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#dogbuilder
+{
+    width: 25%;
+    border:1px solid black;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+#dogbuilder form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#dogbuilder form .step-bullets{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#dogbuilder form .bullet {
+    border:1px solid #2e2e2e;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+}
+
+#dogbuilder form .bullet.active {
+    background-color: green;
+}
+
+#dogbuilder form h2 {
+    margin: 0px;
+}
+
+#dogbuilder form label {
+    margin-top:5px;
+}
+
+#dogbuilder form button {
+    margin:5px;
+}
+
+#dogbuilder form input {
+    max-width: 80%;
+}

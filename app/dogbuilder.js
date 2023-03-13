@@ -42,6 +42,7 @@ export class DogBuilder
 
         //maak de kleine bolletjes
         let stepBulletsEl = document.createElement('div');
+        stepBulletsEl.classList.add('step-bullets');	
         let nrOfBullets = this.steps.length;
         for(let i = 0; i < nrOfBullets; i++){
             let bulletEl = document.createElement('div');
@@ -66,8 +67,7 @@ export class DogBuilder
             stepEl.appendChild(inputEl);
 
         });
-        //haal de inputs getElementById <-- Slimmer
-        //next button ?
+
         let buttonEl    = document.createElement('button');
         buttonEl.innerText = 'Next';
         buttonEl.type = 'submit';//belangrijk
@@ -84,8 +84,8 @@ export class DogBuilder
 
     nextStep(form){
         //roep hier stap 2 aan
-        debugger;
-        let data = new FormData(form);
+        let formdata = new FormData(form);
+        const data = Object.fromEntries(formdata.entries());
         console.log(data);
     };
 }
